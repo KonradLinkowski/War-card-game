@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<VBox prefHeight="600.0" prefWidth="875.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="400.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Game">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#startNewGame" text="New" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openCredits" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane fx:id="gamePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#startNextTurn" prefHeight="575.0" prefWidth="875.0">
+         <children>
+            <ImageView fx:id="enemyDeckNode" fitHeight="200.0" fitWidth="150.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerDeckNode" fitHeight="200.0" fitWidth="150.0" layoutX="711.0" layoutY="361.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="playerPileNode" fitHeight="200.0" fitWidth="150.0" layoutX="445.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="enemyPileNode" fitHeight="200.0" fitWidth="150.0" layoutX="276.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="enemyDeckLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="214.0" prefHeight="17.0" prefWidth="150.0" text="Cards left" textAlignment="CENTER">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="playerDeckLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="712.0" layoutY="318.0" prefHeight="17.0" prefWidth="150.0" text="Cards left" textAlignment="CENTER">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="winLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="203.0" layoutY="191.0" prefHeight="141.0" prefWidth="470.0">
+               <font>
+                  <Font size="96.0" />
+               </font>
+            </Label>
+            <Button layoutX="412.0" layoutY="51.0" mnemonicParsing="false" onAction="#showSomething" text="Button" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
